@@ -14,6 +14,6 @@ import { Country } from '../../interfaces/country.interface';
 export class CountryTableComponent {
 
   @Input()
-  public countries:Country[]=[]
+  public countries:Country[] = []
 
 }
