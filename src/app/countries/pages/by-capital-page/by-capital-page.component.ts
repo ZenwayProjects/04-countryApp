@@ -24,7 +24,7 @@ export class ByCapitalPageComponent {
     .subscribe( countries => {
       this.countries = countries
       this.isLoading = false;
-      console.log(countries);
+      console.log(countries)
     })
   }
 
