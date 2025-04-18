@@ -14,10 +14,13 @@ export class ByRegionPageComponent {
 
   public countries: Country[] = [];
   public regions: Region[] = ['Africa', 'Americas', 'Europe', 'Asia','Oceania'];
-  
+  public selectedRegion?:Region;
 
-  public searchByRegion(term: string) {
-    this.countriesSerive.searchRegion(term).subscribe((countries) => {
+
+  public searchByRegion(region: Region) {
+    this.selectedRegion = region;
+    this.countriesSerive.searchRegion(region)
+    .subscribe((countries) => {
       this.countries = countries;
     });
   }
